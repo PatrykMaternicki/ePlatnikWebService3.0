@@ -4,7 +4,7 @@
  version="2.0">
 
  <persistence-unit name="testPU" transaction-type="RESOURCE_LOCAL">
-	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	<provider>org.hibernate.jpa.HibernatePersitenceProvider</provider>
  <class>com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.*</class>
  <properties>
  <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />

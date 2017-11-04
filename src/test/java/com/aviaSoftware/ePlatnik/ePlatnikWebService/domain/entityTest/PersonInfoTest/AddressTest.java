@@ -2,7 +2,6 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.entityTest.PersonInf
 
 import org.junit.Before;
 import org.junit.Test;
-import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.SetupsToTest.*;
 
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Address;
 
@@ -11,7 +10,7 @@ import static org.junit.Assert.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import static org.hamcrest.CoreMatchers.*;
-public class AddressTest extends HibernateSetup {
+public class AddressTest  {
 
 	private Address address;
 	@Before 
@@ -28,7 +27,7 @@ public class AddressTest extends HibernateSetup {
 	
 	@Test
 	public void should_be_country_is_string(){
-		EntityManager em = Persistence.createEntityManagerFactory("tutorialPU").createEntityManager();
+		EntityManager em = Persistence.createEntityManagerFactory("testPU").createEntityManager();
 		//em.getTransaction().begin();
 		//em.persist(address);
 		//em.getTransaction().commit();

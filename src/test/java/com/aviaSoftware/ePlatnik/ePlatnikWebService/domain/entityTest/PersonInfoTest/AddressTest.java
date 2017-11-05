@@ -28,12 +28,18 @@ public class AddressTest  {
 	@Test
 	public void should_be_country_is_string(){
 		EntityManager em = Persistence.createEntityManagerFactory("testPU").createEntityManager();
-		//em.getTransaction().begin();
-		//em.persist(address);
-		//em.getTransaction().commit();
+		Address address1 = new Address();
+		address1.setCountry("Poland");
+		address1.setCity("Gdansk");
+		address1.setFlatNumber(1);
+		address1.setPostalCode("83-010");
+		address1.setStreet("ul.nowozenska2");
+		em.getTransaction().begin();
+		em.persist(address1);
+		em.getTransaction().commit();
 		//Address foundAddress = em.find(Address.class, address.getId());
 		//assertEquals("Field country in Address is not string",foundAddress.getCountry(),is(String.class));
-		//em.close();
+		em.close();
 	}
 	/*
 	@Test

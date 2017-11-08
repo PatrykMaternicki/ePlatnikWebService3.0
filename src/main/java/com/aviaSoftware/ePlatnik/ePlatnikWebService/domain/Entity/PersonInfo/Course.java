@@ -1,6 +1,13 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo;
 
+import javax.persistence.Entity;
+import javax.persistence.*;
+@Entity
+@Table (name="COURSE")
 public class Course {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String nameCourse;
 	private int expiredTime;
 	private boolean isRequiredToWork;
@@ -22,6 +29,12 @@ public class Course {
 	public void setRequiredToWork(boolean isRequiredToWork) {
 		this.isRequiredToWork = isRequiredToWork;
 	}
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 }

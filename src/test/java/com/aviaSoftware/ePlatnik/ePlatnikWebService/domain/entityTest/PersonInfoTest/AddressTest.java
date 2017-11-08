@@ -1,5 +1,6 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.entityTest.PersonInfoTest;
 
+import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Setups.HibernateSetup;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,14 +11,15 @@ import static org.junit.Assert.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import static org.hamcrest.CoreMatchers.*;
-public class AddressTest  {
+public class AddressTest extends HibernateSetup {
 
     private Address entity;
     private EntityManager em;
 	private Address address;
 	@Before 
 	public void Test(){
-        em = Persistence.createEntityManagerFactory("testPU").createEntityManager();
+        super.createPU();
+        em = super.getEm();
 		address = new Address();
 		address.setCountry("Poland");
 		address.setCity("Gdansk");

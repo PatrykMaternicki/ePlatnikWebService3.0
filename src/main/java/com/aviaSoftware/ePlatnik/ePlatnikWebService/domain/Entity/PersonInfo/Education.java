@@ -1,7 +1,14 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="EDUCATION")
 public class Education {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String nameSchool;
 	private int startYear;
 	private int endYear;
@@ -23,7 +30,12 @@ public class Education {
 	public void setEndYear(int endYear) {
 		this.endYear = endYear;
 	}
-	
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 }

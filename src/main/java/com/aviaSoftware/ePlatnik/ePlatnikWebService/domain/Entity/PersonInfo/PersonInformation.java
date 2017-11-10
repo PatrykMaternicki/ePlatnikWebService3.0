@@ -1,14 +1,30 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo;
 
-import java.util.Date;
+import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.*;
+import java.util.Date;
+@Entity
+@Table(name="PERSON_INFORMATION")
 public class PersonInformation {
+
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column (name="PERSON_INFORMATION_ID",unique=true,nullable = true)
+	private long id;
+	@OneToOne (fetch=FetchType.LAZY, mappedBy="information")
+	private Person person;
 	private String name;
 	private String surName;
 	private Date dateOfBirth;
 	private String placeOfBirth;
 	private int Old;
 	private String pesel;
+
+	public PersonInformation() {
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -45,7 +61,12 @@ public class PersonInformation {
 	public void setPesel(String pesel) {
 		this.pesel = pesel;
 	}
-	
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 }

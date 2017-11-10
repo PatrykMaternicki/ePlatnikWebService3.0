@@ -14,7 +14,7 @@ public class EducationTest extends HibernateSetup {
 
 	private Education education;
 	private Education entity;
-	private String testContent = "";
+	private String testContent = "cos";
 	private Integer testInteger = 0;
 
 	@Before
@@ -38,8 +38,8 @@ public class EducationTest extends HibernateSetup {
 	@Test
 	public void testPU_should_be_return_endYear(){
 		assertEquals("Column endYear in table educaton is not equal endYear in Education Object",
-					education.getEndYear(),
-					entity.getEndYear()
+				education.getEndYear(),
+				entity.getEndYear()
 		);
 	}
 	@Test
@@ -64,5 +64,5 @@ public class EducationTest extends HibernateSetup {
 				entity.getNameSchool()
 		);
 	}
-	
+
 }

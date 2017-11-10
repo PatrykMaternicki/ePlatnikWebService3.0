@@ -30,7 +30,7 @@ public class CourseTest extends HibernateSetup {
 		em.getTransaction().commit();
 		entity = em.find(Course.class,course.getId());
 		em.close();
-		
+
 	}
 	@Test
 	public void nameCourse_should_be_string(){
@@ -57,5 +57,5 @@ public class CourseTest extends HibernateSetup {
 		assertEquals("Entity requiredWork in table COURSE is not equal field requiredWork in Course Object",course.getExpiredTime(),entity.getExpiredTime());
 
 	}
-	
+
 }

@@ -1,9 +1,13 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo;
 
+import javax.persistence.*;
 import java.util.Date;
-
+@Entity
+@Table(name="BEFORE_EMPLOYERS")
 public class BeforeEmployers {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String nameEmployers;
 	private int  startYearWork;
 	private int endYearWork;
@@ -39,5 +43,12 @@ public class BeforeEmployers {
 	public void setStartMonthWork(int startMonthWork) {
 		this.startMonthWork = startMonthWork;
 	}
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 }

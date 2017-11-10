@@ -9,12 +9,15 @@ public class Address {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="ADDRESS_ID")
 	private Long id;
 	private String postalCode;
 	private String City;
 	private String Country;
 	private int flatNumber;
 	private String street;
+	@OneToOne ( mappedBy="adress", fetch = FetchType.LAZY, optional = true)
+	private Person person;
 	public String getPostalCode() {
 		return postalCode;
 	}

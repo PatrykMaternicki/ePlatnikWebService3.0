@@ -16,8 +16,9 @@ public class Person {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PERSON_INFORMATION_ID", nullable = false)
     private PersonInformation information = new PersonInformation();
-    @OneToMany( cascade = CascadeType.ALL,mappedBy = "educateThePerson")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "educateThePerson")
     private List<Education> educationList = new ArrayList<Education>();
+
     public Address getAdress() {
         return adress;
     }

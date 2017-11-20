@@ -16,6 +16,7 @@ import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.testBuilder.ContextTe
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 
@@ -48,7 +49,7 @@ public class ContractTest extends Mockito {
 	@Test
 	public void getRaportOfork_should_be_return_bonus_arrayList(){
 		when(contract.getRaports()).thenReturn(raportList);
-		assertThat("Contract doesnt return raportList object",contract.getRaports(), is(ArrayList.class));
+		assertThat("Contract doesnt return raportList object",contract.getRaports(), is(List.class));
 	}
 	
 	@Test

@@ -1,6 +1,7 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.entityTest;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,13 +52,13 @@ public class employeeTest extends Mockito {
 	@Test
 	public void when_call_method_in_empployee_getBeforeEmloyeeList_then_return_beforeEmployersList(){
 		when(employee.getAfterEmployersList()).thenReturn(list);
-		assertThat("Before Employers list doesnt return",employee.getAfterEmployersList(),is(ArrayList.class));
+		assertThat("Before Employers list doesnt return",employee.getAfterEmployersList(),is(List.class));
 	}
 	
 	@Test
 	public void when_call_method_in_empployee_getBeforeEmloyeeList_then_return_courseList(){
 		when(employee.getCourseList()).thenReturn(courseList);
-		assertThat("Course list doesnt return",employee.getCourseList(),is(ArrayList.class));
+		assertThat("Course list doesnt return",employee.getCourseList(),is(List.class));
 	}
 	
 }

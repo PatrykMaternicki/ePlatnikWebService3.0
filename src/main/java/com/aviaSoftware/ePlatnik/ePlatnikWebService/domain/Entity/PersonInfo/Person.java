@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
+@NamedQueries({
+        @NamedQuery(name = "Person.All", query = "select p from Person as p"),
+        @NamedQuery(name = "Person.findAddress", query = "select p.adress from Person as p where p.adress=:id"),
+        @NamedQuery(name = "Person.findPersonInformation", query = "select p.information from Person as p where p.information=:id")
+})
 @Entity
 @Table(name = "PERSON")
 public class Person {

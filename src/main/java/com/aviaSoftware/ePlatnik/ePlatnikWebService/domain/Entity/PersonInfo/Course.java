@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Course.Id", query = "select c from Course as c where c.ownerCourse=:personId ")
+})
 @Table(name = "COURSE")
 public class Course {
     @Id
@@ -14,9 +17,10 @@ public class Course {
     private String nameCourse;
     private int expiredTime;
     private boolean isRequiredToWork;
-    @ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn (name="EMPLOYEE_ID")
-	private Employee ownerCourse;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "EMPLOYEE_ID")
+    private Employee ownerCourse;
+
     public String getNameCourse() {
         return nameCourse;
     }

@@ -6,6 +6,9 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Contract.Id", query = "select c from Contract as c where c.id=:employeeId")
+})
 @Table(name = "CONTRACT")
 public class Contract {
 

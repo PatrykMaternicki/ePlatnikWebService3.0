@@ -3,6 +3,9 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.ContractInfo;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Bonus.Id", query = "select b from Bonus as b where b.id=:contractId")
+})
 @Table(name = "BONUS")
 public class Bonus {
     @Id

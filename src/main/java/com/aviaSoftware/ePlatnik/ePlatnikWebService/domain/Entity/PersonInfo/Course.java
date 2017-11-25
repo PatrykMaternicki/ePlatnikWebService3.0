@@ -55,5 +55,8 @@ public class Course {
 
     public void setOwnerCourse(Employee ownerCourse) {
         this.ownerCourse = ownerCourse;
+        if (!ownerCourse.getCourseList().contains(this)) {
+            ownerCourse.getCourseList().add(this);
+        }
     }
 }

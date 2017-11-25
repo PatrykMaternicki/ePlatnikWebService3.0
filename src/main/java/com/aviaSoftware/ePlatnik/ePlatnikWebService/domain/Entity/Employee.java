@@ -52,12 +52,12 @@ public class Employee {
         this.contract = contract;
     }
 
-    public ArrayList<BeforeEmployers> getAfterEmployersList() {
-        return getAfterEmployersList();
+    public List<BeforeEmployers> getBeforeEmployersList() {
+        return BeforeEmployersList;
     }
 
-    public void setAfterEmployersList(ArrayList<BeforeEmployers> afterEmployersList) {
-        this.BeforeEmployersList = afterEmployersList;
+    public void setBeforeEmployersList(List<BeforeEmployers> beforeEmployersList) {
+        BeforeEmployersList = beforeEmployersList;
     }
 
     public List<Course> getCourseList() {
@@ -75,4 +75,18 @@ public class Employee {
     public void setId(Long id) {
         this.id = id;
     }
-}
+
+    public void addCourse(Course course) {
+        courseList.add(course);
+        if (course.getOwnerCourse() != this) {
+            course.setOwnerCourse(this);
+        }
+    }
+    public void addBeforeEmployers (BeforeEmployers beforeEmployers){
+            BeforeEmployersList.add(beforeEmployers);
+            if (beforeEmployers.getOwnerBeforeEmployers() != this) {
+                beforeEmployers.setOwnerBeforeEmployers(this);
+            }
+        }
+    }
+

@@ -74,5 +74,8 @@ public class BeforeEmployers {
 
     public void setOwnerBeforeEmployers(Employee ownerBeforeEmployers) {
         this.ownerBeforeEmployers = ownerBeforeEmployers;
+        if (!ownerBeforeEmployers.getBeforeEmployersList().contains(this)) {
+            ownerBeforeEmployers.getBeforeEmployersList().add(this);
+        }
     }
 }

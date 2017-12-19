@@ -1,31 +1,46 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.DAO;
 
-import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
-import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.Employee;
+        import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
+        import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.Employee;
+
+        import javax.persistence.EntityManager;
+        import java.util.List;
 
 public class EmployeeDAO implements Repository<Employee> {
+
+
     @Override
     public void create(Employee entity) {
 
     }
 
     @Override
-    public void remove(Employee entity) {
+    public void update(Employee newRecords, long id) {
 
     }
 
     @Override
-    public void update(Employee entity) {
+    public Employee findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(Employee entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(Employee entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<Employee> getAll() {
+        return null;
     }
 }

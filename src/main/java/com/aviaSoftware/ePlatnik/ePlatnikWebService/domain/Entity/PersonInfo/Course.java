@@ -6,9 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "Course.Id", query = "select c from Course as c where c.ownerCourse=:personId ")
-})
+
 @Table(name = "COURSE")
 public class Course {
     @Id

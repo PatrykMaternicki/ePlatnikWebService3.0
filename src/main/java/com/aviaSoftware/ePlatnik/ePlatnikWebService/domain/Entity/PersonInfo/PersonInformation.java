@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Course.Id", query = "select pi from PersonInformation as pi where pi.id=:id")
+        @NamedQuery(name = "PersonInformation.Id", query = "select pi from PersonInformation as pi where pi.id=:id")
 })
 @Table(name = "PERSON_INFORMATION")
 public class PersonInformation {

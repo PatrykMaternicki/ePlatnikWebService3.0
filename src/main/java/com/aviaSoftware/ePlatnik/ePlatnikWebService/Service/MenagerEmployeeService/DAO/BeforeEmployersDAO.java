@@ -3,29 +3,43 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.BeforeEmployers;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class BeforeEmployersDAO implements Repository<BeforeEmployers> {
+
     @Override
     public void create(BeforeEmployers entity) {
 
     }
 
     @Override
-    public void remove(BeforeEmployers entity) {
+    public void update(BeforeEmployers newRecords, long id) {
 
     }
 
     @Override
-    public void update(BeforeEmployers entity) {
+    public BeforeEmployers findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(BeforeEmployers entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(BeforeEmployers entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<BeforeEmployers> getAll() {
+        return null;
     }
 }

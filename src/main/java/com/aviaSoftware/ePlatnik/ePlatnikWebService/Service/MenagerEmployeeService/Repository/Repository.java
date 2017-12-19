@@ -1,9 +1,15 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public interface Repository<T> {
-    void create(T entity);
-    void remove(T entity);
-    void update(T entity);
-    void findWithId(T entity,int id);
-    void delete(T entity,int id);
+    public void create(T entity);
+    public void update(T newRecords,long id);
+    public T  findWithId(long id);
+    public void remove(long id);
+    public void startDAO (EntityManager em);
+    public void closeDAO();
+    public List<T> getAll();
+
 }

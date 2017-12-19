@@ -3,6 +3,9 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Person;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class PersonDAO implements Repository<Person> {
 
     @Override
@@ -11,22 +14,32 @@ public class PersonDAO implements Repository<Person> {
     }
 
     @Override
-    public void remove(Person entity) {
+    public void update(Person newRecords, long id) {
 
     }
 
     @Override
-    public void update(Person entity) {
+    public Person findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(Person entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(Person entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<Person> getAll() {
+        return null;
     }
 }

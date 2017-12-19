@@ -5,7 +5,8 @@ import javax.persistence.*;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Address.Id", query = "select a from Address as a where a.id=:personId ")
+        @NamedQuery(name = "Address.Id", query = "select a from Address as a where a.id=:personId "),
+        @NamedQuery (name="Address.All", query="select a from Address as a")
 })
 @Table(name = "ADDRESS")
 public class Address {

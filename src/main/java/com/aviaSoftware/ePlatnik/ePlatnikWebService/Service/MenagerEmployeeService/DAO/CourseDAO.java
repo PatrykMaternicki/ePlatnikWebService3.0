@@ -3,29 +3,43 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Course;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class CourseDAO implements Repository<Course> {
+
     @Override
     public void create(Course entity) {
 
     }
 
     @Override
-    public void remove(Course entity) {
+    public void update(Course newRecords, long id) {
 
     }
 
     @Override
-    public void update(Course entity) {
+    public Course findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(Course entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(Course entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<Course> getAll() {
+        return null;
     }
 }

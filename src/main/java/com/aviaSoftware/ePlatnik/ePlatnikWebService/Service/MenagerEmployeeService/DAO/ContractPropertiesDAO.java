@@ -2,29 +2,43 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class ContractPropertiesDAO implements Repository<ContractPropertiesDAO> {
+
     @Override
     public void create(ContractPropertiesDAO entity) {
 
     }
 
     @Override
-    public void remove(ContractPropertiesDAO entity) {
+    public void update(ContractPropertiesDAO newRecords, long id) {
 
     }
 
     @Override
-    public void update(ContractPropertiesDAO entity) {
+    public ContractPropertiesDAO findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(ContractPropertiesDAO entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(ContractPropertiesDAO entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<ContractPropertiesDAO> getAll() {
+        return null;
     }
 }

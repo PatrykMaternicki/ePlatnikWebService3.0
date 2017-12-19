@@ -7,7 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Contract.Id", query = "select c from Contract as c where c.id=:employeeId")
+        @NamedQuery(name = "Contract.Id", query = "select c from Contract as c where c.id=:contractId"),
+        @NamedQuery (name="Contract.useIdToFindBonus" ,query= "select c.bonus from Contract as c where c.id=:contractId")
 })
 @Table(name = "CONTRACT")
 public class Contract {

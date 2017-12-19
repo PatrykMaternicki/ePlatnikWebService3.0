@@ -3,29 +3,44 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Education;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class EducationDAO implements Repository<Education> {
+
+
     @Override
     public void create(Education entity) {
 
     }
 
     @Override
-    public void remove(Education entity) {
+    public void update(Education newRecords, long id) {
 
     }
 
     @Override
-    public void update(Education entity) {
+    public Education findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(Education entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(Education entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<Education> getAll() {
+        return null;
     }
 }

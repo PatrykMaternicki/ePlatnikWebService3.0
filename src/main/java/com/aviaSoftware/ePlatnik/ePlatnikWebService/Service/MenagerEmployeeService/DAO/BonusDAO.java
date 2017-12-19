@@ -3,29 +3,43 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.ContractInfo.Bonus;
 
+import javax.persistence.EntityManager;
+import java.util.List;
+
 public class BonusDAO implements Repository<Bonus> {
+
     @Override
     public void create(Bonus entity) {
 
     }
 
     @Override
-    public void remove(Bonus entity) {
+    public void update(Bonus newRecords, long id) {
 
     }
 
     @Override
-    public void update(Bonus entity) {
+    public Bonus findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public void remove(long id) {
 
     }
 
     @Override
-    public void findWithId(Bonus entity, int id) {
+    public void startDAO(EntityManager em) {
 
     }
 
     @Override
-    public void delete(Bonus entity, int id) {
+    public void closeDAO() {
 
+    }
+
+    @Override
+    public List<Bonus> getAll() {
+        return null;
     }
 }

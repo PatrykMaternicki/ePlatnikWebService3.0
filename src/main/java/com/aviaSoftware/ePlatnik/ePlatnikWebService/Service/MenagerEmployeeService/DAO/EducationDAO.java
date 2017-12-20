@@ -8,19 +8,23 @@ import java.util.List;
 
 public class EducationDAO implements Repository<Education> {
 
-
     @Override
     public void create(Education entity) {
 
     }
 
     @Override
-    public void update(Education newRecords, long id) {
-
+    public boolean update(Education newRecords, long id) {
+        return false;
     }
 
     @Override
     public Education findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Education> findListUsingOwnerId(long id) {
         return null;
     }
 

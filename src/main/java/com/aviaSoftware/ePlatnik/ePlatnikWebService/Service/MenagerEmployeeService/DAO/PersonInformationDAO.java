@@ -8,19 +8,23 @@ import java.util.List;
 
 public class PersonInformationDAO implements Repository<PersonInformation> {
 
-
     @Override
     public void create(PersonInformation entity) {
 
     }
 
     @Override
-    public void update(PersonInformation newRecords, long id) {
-
+    public boolean update(PersonInformation newRecords, long id) {
+        return false;
     }
 
     @Override
     public PersonInformation findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<PersonInformation> findListUsingOwnerId(long id) {
         return null;
     }
 

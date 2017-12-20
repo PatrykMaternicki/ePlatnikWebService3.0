@@ -8,19 +8,23 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 
 public class EmployeeDAO implements Repository<Employee> {
 
-
     @Override
     public void create(Employee entity) {
 
     }
 
     @Override
-    public void update(Employee newRecords, long id) {
-
+    public boolean update(Employee newRecords, long id) {
+        return false;
     }
 
     @Override
     public Employee findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Employee> findListUsingOwnerId(long id) {
         return null;
     }
 

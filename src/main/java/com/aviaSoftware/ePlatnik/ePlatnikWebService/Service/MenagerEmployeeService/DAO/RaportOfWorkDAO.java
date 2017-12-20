@@ -8,19 +8,23 @@ import java.util.List;
 
 public class RaportOfWorkDAO implements Repository<RaportOfWork> {
 
-
     @Override
     public void create(RaportOfWork entity) {
 
     }
 
     @Override
-    public void update(RaportOfWork newRecords, long id) {
-
+    public boolean update(RaportOfWork newRecords, long id) {
+        return false;
     }
 
     @Override
     public RaportOfWork findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<RaportOfWork> findListUsingOwnerId(long id) {
         return null;
     }
 

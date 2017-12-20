@@ -7,18 +7,24 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 public class ContractDAO implements Repository<Contract> {
+
     @Override
     public void create(Contract entity) {
 
     }
 
     @Override
-    public void update(Contract newRecords, long id) {
-
+    public boolean update(Contract newRecords, long id) {
+        return false;
     }
 
     @Override
     public Contract findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Contract> findListUsingOwnerId(long id) {
         return null;
     }
 

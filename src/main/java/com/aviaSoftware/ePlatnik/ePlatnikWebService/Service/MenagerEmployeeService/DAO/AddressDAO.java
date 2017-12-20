@@ -1,5 +1,8 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.DAO;
 
+import com.aviaSoftware.ePlatnik.ePlatnikWebService.Collection.ListMethodCollection;
+import com.aviaSoftware.ePlatnik.ePlatnikWebService.Loggers.NoResultExceptionLogger;
+import com.aviaSoftware.ePlatnik.ePlatnikWebService.Loggers.NoUsedMethodLogger;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository.Repository;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Address;
 
@@ -19,15 +22,21 @@ public class AddressDAO implements Repository<Address> {
     }
 
     @Override
-    public void update(Address newRecords, long id) {
-        Address entity = em.createNamedQuery("Address.Id", Address.class).setParameter("personId", id).getSingleResult();
-        entity.setStreet(newRecords.getStreet());
-        entity.setPostalCode(newRecords.getPostalCode());
-        entity.setFlatNumber(newRecords.getFlatNumber());
-        entity.setCountry(newRecords.getCountry());
-        entity.setCity(newRecords.getCity());
-        em.persist(entity);
-
+    public boolean update(Address newRecords, long id) {
+        try{
+            Address entity = em.createNamedQuery("Address.Id", Address.class).setParameter("personId", id).getSingleResult();
+            entity.setStreet(newRecords.getStreet());
+            entity.setPostalCode(newRecords.getPostalCode());
+            entity.setFlatNumber(newRecords.getFlatNumber());
+            entity.setCountry(newRecords.getCountry());
+            entity.setCity(newRecords.getCity());
+            em.persist(entity);
+            return true;
+        }
+        catch (NoResultException e) {
+            NoResultExceptionLogger.setException("Nie znalazlem takiego rekordu","w tabeli address");
+            return false;
+        }
 
     }
 
@@ -88,6 +97,11 @@ public class AddressDAO implements Repository<Address> {
         List<Address> entity = em.createNamedQuery("Address.All", Address.class).getResultList();
         closeConnect();
         return entity;
+    }
+    @Override
+    public List<Address> findListUsingOwnerId(long id) {
+        NoUsedMethodLogger.setException("FingListUsingOwnerId nie jest obsługiwana","w AddressDAO");
+        return null;
     }
 
 

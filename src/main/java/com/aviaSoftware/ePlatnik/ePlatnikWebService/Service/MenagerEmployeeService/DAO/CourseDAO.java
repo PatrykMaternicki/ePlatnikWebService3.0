@@ -14,12 +14,17 @@ public class CourseDAO implements Repository<Course> {
     }
 
     @Override
-    public void update(Course newRecords, long id) {
-
+    public boolean update(Course newRecords, long id) {
+        return false;
     }
 
     @Override
     public Course findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Course> findListUsingOwnerId(long id) {
         return null;
     }
 

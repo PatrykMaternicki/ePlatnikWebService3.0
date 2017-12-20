@@ -3,9 +3,12 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.Employee;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "BeforeEmployers.get", query = "select be from BeforeEmployers as be where be.id=:personId "),
+        @NamedQuery(name = "BeforeEmployers.getAll", query = "select be from BeforeEmployers as be")
+})
 @Table(name = "BEFORE_EMPLOYERS")
 public class BeforeEmployers {
     @Id
@@ -16,8 +19,8 @@ public class BeforeEmployers {
     private int endYearWork;
     private int endMonthWork;
     private int startMonthWork;
-    @ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn (name="EMPLOYEE_ID")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "EMPLOYEE_ID")
     private Employee ownerBeforeEmployers;
 
     public String getNameEmployers() {

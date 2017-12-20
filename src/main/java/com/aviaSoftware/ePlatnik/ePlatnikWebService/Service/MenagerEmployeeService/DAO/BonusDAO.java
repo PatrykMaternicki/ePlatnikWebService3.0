@@ -14,12 +14,17 @@ public class BonusDAO implements Repository<Bonus> {
     }
 
     @Override
-    public void update(Bonus newRecords, long id) {
-
+    public boolean update(Bonus newRecords, long id) {
+        return false;
     }
 
     @Override
     public Bonus findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Bonus> findListUsingOwnerId(long id) {
         return null;
     }
 

@@ -14,12 +14,17 @@ public class PersonDAO implements Repository<Person> {
     }
 
     @Override
-    public void update(Person newRecords, long id) {
-
+    public boolean update(Person newRecords, long id) {
+        return false;
     }
 
     @Override
     public Person findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Person> findListUsingOwnerId(long id) {
         return null;
     }
 

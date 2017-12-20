@@ -13,12 +13,17 @@ public class ContractPropertiesDAO implements Repository<ContractPropertiesDAO> 
     }
 
     @Override
-    public void update(ContractPropertiesDAO newRecords, long id) {
-
+    public boolean update(ContractPropertiesDAO newRecords, long id) {
+        return false;
     }
 
     @Override
     public ContractPropertiesDAO findWithId(long id) {
+        return null;
+    }
+
+    @Override
+    public List<ContractPropertiesDAO> findListUsingOwnerId(long id) {
         return null;
     }
 

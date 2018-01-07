@@ -69,7 +69,6 @@ public class AddressDAO implements Repository<Address> {
         entity.setPostalCode("Entity not found");
         entity.setStreet("Entity not found");
         return entity;
-
     }
 
     @Override

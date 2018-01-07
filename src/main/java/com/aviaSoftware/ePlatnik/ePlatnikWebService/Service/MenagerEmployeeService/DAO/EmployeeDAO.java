@@ -8,6 +8,7 @@ package com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeServ
 
 public class EmployeeDAO implements Repository<Employee> {
 
+    private EntityManager em;
     @Override
     public void create(Employee entity) {
 

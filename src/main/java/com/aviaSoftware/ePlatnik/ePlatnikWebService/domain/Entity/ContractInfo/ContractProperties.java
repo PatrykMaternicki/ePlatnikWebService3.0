@@ -6,6 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @Table (name="CONTRACT_PROPERTIES")
+@NamedQueries({
+        @NamedQuery(name = "ContractProperties.Id", query = "select cp from ContractProperties as cp where cp.id=:contractId")
+})
 public class ContractProperties {
 
     @Id

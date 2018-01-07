@@ -86,7 +86,5 @@ public class AddressDAOTest {
         List<Address> entityList = new ArrayList<Address>();
         entityList = testDAO.getAll();
         assertTrue("In addressDAO in getAll something is wrong", ListMethodCollection.isEmptyList(entityList));
-
-
     }
 }

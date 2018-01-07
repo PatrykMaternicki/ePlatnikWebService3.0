@@ -59,6 +59,7 @@ public class ContractDAOTest {
         System.out.println("test : " + testEntity.getId() + " founded entity :" + foundEntity.getId());
         assertEquals("ContractDAO didn't add a entity", testEntity.getId(), foundEntity.getId());
     }
+
     @Ignore ("Nie dziala jeszcze")
     @Test
     public void ContractDAO_should_be_update_entity() {
@@ -72,7 +73,6 @@ public class ContractDAOTest {
         Contract entityAfterUpdate = (Contract) testDAO.findWithId(1);
         System.out.println("endTimeContract " + entityAfterUpdate.getEndTimeContract() + "typeContract" + entityAfterUpdate.getTypeContract());
         assertEquals("ContractDAO didn't updated",ContextTestBuilder.testString, entityAfterUpdate.getStartTimeContract());
-
     }
 
     @Ignore ("Zacina sie")

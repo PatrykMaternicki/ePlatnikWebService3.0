@@ -1,4 +1,4 @@
-package com.aviaSoftware.ePlatnik.ePlatnikWebService.REST;
+package rest.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,6 +12,6 @@ public class Test {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response test() {
-		return Response.ok("working").build();
+		return Response.ok("Dzialaj kurwo").build();
 	}
 }

@@ -1,4 +1,4 @@
-package rest.service;
+package com.aviaSoftware.ePlatnik.ePlatnikRestService.service;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

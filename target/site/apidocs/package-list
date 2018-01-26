@@ -1,0 +1,15 @@
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Collection
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Loggers
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.DAO
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.HibernateSetup
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Service.MenagerEmployeeService.Repository
+com.aviaSoftware.ePlatnik.ePlatnikWebService.Servlets
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Data.AccessSystem.User
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Data.AccessSystem.User.Permision
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Data.InitSystem
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Data.InitSystem.ModeSystem
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Data.System
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.ContractInfo
+com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo

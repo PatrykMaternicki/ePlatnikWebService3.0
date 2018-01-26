@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ePlatnik Web Service</title>
 <a href="test">Go to test</a>
 </head>
 <body>
-Hello world
+Witaj na stronie <strong>ePlatnik Web Service</strong>
 </body>
 </html>

@@ -14,7 +14,7 @@ import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.Employee;
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Person;
 
 
-@WebServlet("/test")
+@WebServlet("/test2")
 public class testServlet extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

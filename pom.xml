@@ -46,17 +46,22 @@
                          <scope>test</scope>
                          <type>jar</type>
    </dependency>
+
+
+	  <dependency>
+		  <groupId>com.sun.jersey</groupId>
+		  <artifactId>jersey-server</artifactId>
+		  <version>1.2</version>
+	  </dependency>
    
    <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
- 
 <dependency>
     <groupId>javax.ws.rs</groupId>
     <artifactId>javax.ws.rs-api</artifactId>
     <version>2.0</version>
 </dependency>
-   
-   
-   <!-- REST service, gdy ta zależność jest aktywna nie działają servlety po poleceniun mvn tomcat7:run 
+
+   <!-- REST service 
 	<dependency>
 		<groupId>javax</groupId>
 		<artifactId>javaee-web-api</artifactId>
@@ -139,8 +144,14 @@
           <path>/</path>
         </configuration>
       </plugin>
-      
-      
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>3.0.0</version>
+			<configuration>
+				<stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
+				<show>public</show>
+			</configuration>
+		</plugin>
     </plugins>
   </build>
-</project>

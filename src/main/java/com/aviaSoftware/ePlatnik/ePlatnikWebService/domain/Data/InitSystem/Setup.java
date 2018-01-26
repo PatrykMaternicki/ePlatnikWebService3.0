@@ -13,6 +13,4 @@ public class Setup {
 	public iSystemMode getModeSystem(){
 		return modeSystem;
 	}
-	
-	
 }

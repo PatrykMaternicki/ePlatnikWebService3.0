@@ -6,6 +6,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "RAPORT_OF_WORK")
+@NamedQueries({
+        @NamedQuery(name = "RaportOfWork.Id", query = "select rpo from RaportOfWork as rpo where rpo.id=:personId "),
+        @NamedQuery(name = "RaportOfWork.getAll", query = "select rpo from RaportOfWork as rpo"),
+        @NamedQuery(name= "RaportOfWork.getAllOwnedWithContract", query="select rpo from RaportOfWork as rpo where rpo.owner_raport=:contractId")
+})
 public class RaportOfWork {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

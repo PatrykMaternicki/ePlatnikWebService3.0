@@ -9,7 +9,7 @@
 <body>
 <label><strong>Rejestracja nowego uzytkownika systemu ePLatnik</strong></label><br />
 <form action="registerPersonInformation" method="post">
-<label><strong>Name:</strong><input type="text" id="name" name="name"></label><br />
+<label><strong>Postal Code:</strong><input type="text" id="name" name="name"></label><br />
 <label><strong>Surname:</strong><input type="text" id="surname" name="surname"></label><br />
 <label><strong>Date of Birth:</strong><input type="text" id="dateofbirth" name="dateofbirth"></label><br />
 <label><strong>Place of Birth:</strong><input type="text" id="placeofbirth" name="placeofbirth"></label><br />

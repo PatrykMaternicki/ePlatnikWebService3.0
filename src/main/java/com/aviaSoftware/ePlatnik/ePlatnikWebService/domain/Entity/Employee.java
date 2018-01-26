@@ -1,7 +1,6 @@
 package com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 
@@ -11,7 +10,10 @@ import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Cou
 import com.aviaSoftware.ePlatnik.ePlatnikWebService.domain.Entity.PersonInfo.Person;
 
 import javax.persistence.Entity;
-
+@NamedQueries({
+        @NamedQuery(name = "Employee.Id", query = "select e from Employee as e where e.id=:personId "),
+        @NamedQuery (name="Employee.All", query="select e from Employee as e")
+})
 
 @Entity
 @Table(name = "EMPLOYEE")
@@ -64,7 +66,7 @@ public class Employee {
         return courseList;
     }
 
-    public void setCourseList(ArrayList<Course> courseList) {
+    public void setCourseList(List<Course> courseList) {
         this.courseList = courseList;
     }
 

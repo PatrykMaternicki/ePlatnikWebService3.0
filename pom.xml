@@ -46,13 +46,6 @@
                          <scope>test</scope>
                          <type>jar</type>
    </dependency>
-
-
-	  <dependency>
-		  <groupId>com.sun.jersey</groupId>
-		  <artifactId>jersey-server</artifactId>
-		  <version>1.2</version>
-	  </dependency>
    
    <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
 <dependency>
@@ -155,3 +148,4 @@
 		</plugin>
     </plugins>
   </build>
+</project>
